@@ -4,8 +4,27 @@
     <af:document title="mainHR.jsf" id="d1">
         <af:form id="f1">
             <af:panelSplitter orientation="horizontal" splitterPosition="300" id="ps1">
-                <f:facet name="first"/>
-                <f:facet name="second"/>
+                <f:facet name="first">
+                    <af:panelAccordion discloseMany="false" id="pa1">
+                        <af:showDetailItem id="pane1" text="Dept"/>
+                    </af:panelAccordion>
+                </f:facet>
+                <f:facet name="second">
+                    <af:panelSplitter id="ps2" orientation="vertical">
+                        <f:facet name="first">
+                            <af:panelCollection id="pc1">
+                                <f:facet name="menus"/>
+                                <f:facet name="toolbar"/>
+                                <f:facet name="statusbar"/>
+                            </af:panelCollection>
+                        </f:facet>
+                        <f:facet name="second">
+                            <af:panelTabbed position="above" id="pt1">
+                                <af:showDetailItem id="tab1" text="Emp"/>
+                            </af:panelTabbed>
+                        </f:facet>
+                    </af:panelSplitter>
+                </f:facet>
             </af:panelSplitter>
         </af:form>
     </af:document>
