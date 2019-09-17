@@ -84,4 +84,10 @@ public class HRFacadeBean implements HRFacade, HRFacadeLocal {
     public List<Employees> getEmployeesFindAll() {
         return em.createNamedQuery("Employees.findAll", Employees.class).getResultList();
     }
+
+    /** <code>select o from Employees o where o.salary > :p_sal</code> */
+    @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
+    public List<Employees> getEmployeesFindBySal(Integer p_sal) {
+        return em.createNamedQuery("Employees.findBySal", Employees.class).setParameter("p_sal", p_sal).getResultList();
+    }
 }

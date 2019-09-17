@@ -27,4 +27,6 @@ public interface HRFacade {
     void removeEmployees(Employees employees);
 
     List<Employees> getEmployeesFindAll();
+
+    List<Employees> getEmployeesFindBySal(Integer p_sal);
 }

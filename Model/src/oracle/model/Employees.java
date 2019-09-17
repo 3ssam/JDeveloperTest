@@ -19,7 +19,9 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@NamedQueries({ @NamedQuery(name = "Employees.findAll", query = "select o from Employees o") })
+@NamedQueries({ @NamedQuery(name = "Employees.findAll", query = "select o from Employees o"),
+                @NamedQuery(name = "Employees.findBySal", query = "select o from Employees o where o.salary > :p_sal")
+})
 public class Employees implements Serializable {
     private static final long serialVersionUID = 7806563687004446255L;
     @Column(name = "COMMISSION_PCT")

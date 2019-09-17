@@ -37,6 +37,13 @@
                                 </af:inputText>
                                 <f:facet name="footer">
                                     <af:panelGroupLayout layout="horizontal" id="pgl1">
+                                        <af:button actionListener="#{bindings.Create.execute}" text="Create"
+                                                   disabled="#{!bindings.Create.enabled}" id="b6"/>
+                                        <af:button actionListener="#{bindings.persistDepartments.execute}"
+                                                   text="persist" disabled="#{!bindings.persistDepartments.enabled}"
+                                                   id="b8"/>
+                                        <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
+                                                   disabled="#{!bindings.Delete.enabled}" id="b7"/>
                                         <af:button actionListener="#{bindings.First.execute}" text="First"
                                                    disabled="#{!bindings.First.enabled}" partialSubmit="true" id="b1"/>
                                         <af:button actionListener="#{bindings.Previous.execute}" text="Previous"

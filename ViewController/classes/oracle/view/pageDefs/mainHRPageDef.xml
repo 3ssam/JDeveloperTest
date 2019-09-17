@@ -94,5 +94,14 @@
         <Item Value="salary"/>
       </AttrNames>
     </attributeValues>
+    <action IterBinding="departmentsFindAllIterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
+    <action IterBinding="departmentsFindAllIterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <methodAction id="persistDepartments" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="persistDepartments" IsViewObjectMethod="false" DataControl="HRFacadeBean"
+                  InstanceName="data.HRFacadeBean.dataProvider"
+                  ReturnName="data.HRFacadeBean.methodResults.persistDepartments_HRFacadeBean_dataProvider_persistDepartments_result">
+      <NamedData NDName="departments" NDValue="#{bindings.departmentsFindAllIterator.currentRow.dataProvider}"
+                 NDType="oracle.model.Departments"/>
+    </methodAction>
   </bindings>
 </pageDefinition>
