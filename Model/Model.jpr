@@ -71,6 +71,15 @@
    <value n="defaultPackage" v="oracle.model"/>
    <hash n="ejbModuleContainer">
       <value n="dbConnection" v="HR@Local"/>
+      <hash n="ejbDiagramToPuMap">
+         <hash n="model">
+            <hash n="oracle">
+               <hash n="model">
+                  <value n="HR EJB Diagram.ejb_diagram" v="Model"/>
+               </hash>
+            </hash>
+         </hash>
+      </hash>
       <value n="ejbVersion" v="3.0"/>
       <value n="ejbVersionMinor" v="0.1"/>
    </hash>
@@ -79,7 +88,9 @@
          <string v="ADFbc"/>
          <string v="Database"/>
          <string v="EJB"/>
+         <string v="EJB-Modeling"/>
          <string v="Java"/>
+         <string v="Java-Modeling"/>
          <string v="TopLink"/>
          <string v="XML"/>
       </list>
