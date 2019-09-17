@@ -300,6 +300,9 @@
                                         </f:facet>
                                     </af:panelFormLayout>
                                 </af:showDetailItem>
+                                <af:showDetailItem text="Search" id="sdi1">
+                                    <af:region value="#{bindings.findBySalFlow1.regionModel}" id="r1"/>
+                                </af:showDetailItem>
                             </af:panelTabbed>
                         </f:facet>
                     </af:panelSplitter>

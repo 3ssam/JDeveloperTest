@@ -4,6 +4,27 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="HRFacadeBean" id="HRFacadeBeanIterator"/>
+    <accessorIterator MasterBinding="HRFacadeBeanIterator" Binds="employeesFindBySal" RangeSize="25"
+                      DataControl="HRFacadeBean" BeanClass="oracle.model.Employees" id="employeesFindBySalIterator"/>
+    <searchRegion Binds="employeesFindBySalIterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="employeesFindBySalQuery"/>
   </executables>
-  <bindings/>
+  <bindings>
+    <tree IterBinding="employeesFindBySalIterator" id="employeesFindBySal">
+      <nodeDefinition DefName="oracle.model.Employees" Name="employeesFindBySal0">
+        <AttrNames>
+          <Item Value="commissionPct"/>
+          <Item Value="email"/>
+          <Item Value="employeeId"/>
+          <Item Value="firstName"/>
+          <Item Value="hireDate"/>
+          <Item Value="jobId"/>
+          <Item Value="lastName"/>
+          <Item Value="phoneNumber"/>
+          <Item Value="salary"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
 </pageDefinition>

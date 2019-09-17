@@ -2,4 +2,60 @@
 <SDM>
    <OverallProperties
       id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">view1</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">159.0</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>view1&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">169.24707</property>
+      <property
+         name="page">/view1.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">view2</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">374.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>view2&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">169.59766</property>
+      <property
+         name="page">/view2.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">find</property>
+      <property
+         name="sdm:polyPoints">R50,200.0,168.89648,333.0,169.24707,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="View3"
+      to="View2">
+      <property
+         name="fromOutcome">back</property>
+      <property
+         name="sdm:polyPoints">L54,332.99078,172.74707,200.0,172.39648,R54</property>
+   </ControlFlowCase>
 </SDM>
