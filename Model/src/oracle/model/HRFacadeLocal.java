@@ -28,5 +28,5 @@ public interface HRFacadeLocal {
 
     List<Employees> getEmployeesFindAll();
 
-    List<Employees> getEmployeesFindBySal(Integer p_sal);
+    List<Employees> getEmployeesFindByName(String p_name);
 }

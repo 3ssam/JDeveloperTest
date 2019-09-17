@@ -13,6 +13,8 @@
                       ChangeEventPolicy="ppr"/>
     <searchRegion Binds="employeesList1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="employeesList1Query"/>
+    <taskFlow id="findBySalFlow1" taskFlowId="/WEB-INF/findBySalFlow.xml#findBySalFlow" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="departmentsFindAllIterator" id="departmentId">
